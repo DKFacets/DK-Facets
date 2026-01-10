@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Products | D&K Facets</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- MAIN SITE CSS -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- GALLERY CSS (ONLY FOR THIS PAGE) -->
+  <style>
+    .product-categories {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 26px;
+    }
+
+    .cat-btn {
+      padding: 10px 20px;
+      border-radius: 30px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text-dark);
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .cat-btn.active,
+    .cat-btn:hover {
+      background: var(--gold);
+      color: black;
+    }
+
+    .product-group {
+      display: none;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .product-group.active {
+      display: block;
+    }
+
+    .subtypes {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+
+    .sub-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      border: 1px solid var(--gold);
+      background: transparent;
+      color: var(--text-dark);
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: 0.25s;
+    }
+
+    .sub-btn.active,
+    .sub-btn:hover {
+      background: var(--gold);
+      color: black;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 26px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      max-height: 340px;
+      object-fit: contain;
+      background: #0b1220;
+      padding: 14px;
+      border-radius: 16px;
+      box-shadow: 0 20px 45px rgba(0,0,0,0.35);
+      transition: transform 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <img src="../images/logo1.png" class="logo" alt="D&K Facets">
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="order-coordination.html">Order</a></li>
+      <li><a class="active">Products</a></li>
+      <li><a href="collaboration.html">Collaboration</a></li>
+      <li><a href="contact.html" class="btn-nav">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-box">
+    <div class="hero-content">
+      <h1>Jewelry Collection</h1>
+      <p>
+        Explore a curated range of custom diamond jewelry —
+        coordinated with precision, quality, and discretion.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT GALLERY -->
+<section class="section">
+  <div class="container">
+
+    <h2 style="text-align:center;">Explore Jewelry Types</h2>
+
+    <!-- CATEGORY BUTTONS -->
+    <div class="product-categories">
+      <button class="cat-btn active" data-cat="rings">Rings</button>
+      <button class="cat-btn" data-cat="pendants">Pendants</button>
+      <button class="cat-btn" data-cat="earrings">Earrings</button>
+      <button class="cat-btn" data-cat="bracelets">Bracelets</button>
+      <button class="cat-btn" data-cat="cubanwatch">Cuban & Watch</button>
+    </div>
+
+    <!-- RINGS -->
+    <div class="product-group active" id="rings">
+      <div class="subtypes">
+        <button class="sub-btn active" data-set="ring_engagement">Engagement Rings</button>
+        <button class="sub-btn" data-set="ring_wedding">Wedding Rings</button>
+        <button class="sub-btn" data-set="ring_custom">Custom Rings</button>
+      </div>
+    </div>
+
+    <!-- PENDANTS -->
+    <div class="product-group" id="pendants">
+      <div class="subtypes">
+        <button class="sub-btn active" data-set="pendant_name">Name Jewelry</button>
+        <button class="sub-btn" data-set="pendant_religious">Religious</button>
+        <button class="sub-btn" data-set="pendant_statement">Statement</button>
+        <button class="sub-btn" data-set="pendant_minimal">Minimal</button>
+      </div>
+    </div>
+
+    <!-- EARRINGS -->
+    <div class="product-group" id="earrings">
+      <div class="subtypes">
+        <button class="sub-btn active" data-set="earring_stud">Studs</button>
+        <button class="sub-btn" data-set="earring_hoop">Hoops</button>
+        <button class="sub-btn" data-set="earring_drop">Drops</button>
+        <button class="sub-btn" data-set="earring_dangler">Danglers</button>
+      </div>
+    </div>
+
+    <!-- BRACELETS -->
+    <div class="product-group" id="bracelets">
+      <div class="subtypes">
+        <button class="sub-btn active" data-set="bracelet_tennis">Tennis</button>
+        <button class="sub-btn" data-set="bracelet_statement">Statement</button>
+        <button class="sub-btn" data-set="bracelet_custom">Custom</button>
+      </div>
+    </div>
+
+    <!-- CUBAN & WATCH -->
+    <div class="product-group" id="cubanwatch">
+      <div class="subtypes">
+        <button class="sub-btn active" data-set="cuban_chain">Cuban Chains</button>
+        <button class="sub-btn" data-set="diamond_watch">Diamond Watches</button>
+      </div>
+    </div>
+
+    <!-- IMAGE GRID -->
+    <div class="gallery" id="gallery"></div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <h2 class="footer-heading">Our Team</h2>
+  <div class="footer-container">
+    <div class="footer-left">
+      <p>Drashti Patel</p>
+      <p>Managing Partner – Operations, Design & Quality Control</p>
+      <p>Email: drashtipatel1277@gmail.com</p>
+      <p>WhatsApp: +49 152 13525023</p>
+    </div>
+
+    <div class="footer-center">
+      <p>Krunal Patel</p>
+      <p>Managing Partner – Sales, Strategy & Growth</p>
+      <p>Email: pk1112233.kp@gmail.com</p>
+      <p>WhatsApp: +49 176 57698082</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Daksh Patel</p>
+      <p>Associated Partner – Finance & Logistics</p>
+      <p>Email: dakshpatel1015@gmail.com</p>
+      <p>WhatsApp: +49 178 5148274</p>
+    </div>
+  </div>
+</footer>
+
+<!-- GALLERY SCRIPT (JPEG FIXED) -->
+<script>
+  const gallery = document.getElementById("gallery");
+
+  function loadImages(prefix) {
+    gallery.innerHTML = "";
+    for (let i = 1; i <= 3; i++) {
+      const img = document.createElement("img");
+      img.src = `../images/${prefix}_${i}.jpeg`;
+      img.alt = prefix + " image " + i;
+      gallery.appendChild(img);
+    }
+  }
+
+  document.querySelectorAll(".cat-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+
+      document.querySelectorAll(".product-group").forEach(g => g.classList.remove("active"));
+      document.getElementById(btn.dataset.cat).classList.add("active");
+
+      const firstSub = document
+        .getElementById(btn.dataset.cat)
+        .querySelector(".sub-btn");
+
+      document.querySelectorAll(".sub-btn").forEach(b => b.classList.remove("active"));
+      firstSub.classList.add("active");
+
+      loadImages(firstSub.dataset.set);
+    });
+  });
+
+  document.querySelectorAll(".sub-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      btn.parentElement.querySelectorAll(".sub-btn").forEach(b => b.classList.remove("active"));
+      btn.classList.add("active");
+      loadImages(btn.dataset.set);
+    });
+  });
+
+  /* Initial load */
+  loadImages("ring_engagement");
+</script>
+
+</body>
+</html>
