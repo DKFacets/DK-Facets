@@ -20,7 +20,7 @@
 }
 
 body {
-
+   
   font-family: "Inter", sans-serif;
   background: white;
   color: var(--text-dark);
@@ -248,6 +248,10 @@ body {
 .compare {
   width: 100%;
   border-collapse: collapse;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
 }
 
 .compare th,
@@ -660,5 +664,30 @@ footer {
   color: #ffffff;
   margin-bottom: 24px;
   font-weight: 600;
+}
+
+/* ===== REMOVE ALL IMAGE BOX BACKGROUNDS (FINAL OVERRIDE) ===== */
+
+.showcase-img,
+.product-card,
+.gallery img,
+.gallery-img {
+  background: transparent !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+.showcase-img img,
+.product-card img,
+.gallery img {
+  background: transparent !important;
+  padding: 0 !important;
+  border-radius: 12px;
+  box-shadow: none !important;
+}
+.showcase-img:hover,
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: none;
 }
 
