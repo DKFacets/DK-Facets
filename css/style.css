@@ -20,6 +20,11 @@
 }
 
 body {
+   html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
   font-family: "Inter", sans-serif;
   background: white;
   color: var(--text-dark);
@@ -643,3 +648,4 @@ footer {
     text-align: center;
   }
 }
+
