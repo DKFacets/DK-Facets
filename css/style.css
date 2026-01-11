@@ -549,3 +549,97 @@ footer {
 .sub-btn:active {
   transform: scale(0.96);
 }
+
+/* =========================
+   MOBILE RESPONSIVENESS FIX
+   ========================= */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .nav-container {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+  }
+
+  .logo {
+    height: 36px;
+  }
+
+  /* HERO */
+  .hero {
+    padding: 110px 16px 60px;
+  }
+
+  .hero-box {
+    padding: 40px 24px;
+  }
+
+  .hero-content h1 {
+    font-size: 28px;
+  }
+
+  .hero-content p {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+  }
+
+  .hero-actions a {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SECTIONS */
+  .section {
+    padding: 70px 16px;
+  }
+
+  .section h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  /* GRIDS */
+  .grid,
+  .metrics,
+  .timeline,
+  .gallery {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* PRODUCT GALLERY */
+  .product-categories,
+  .subtypes {
+    gap: 10px;
+  }
+
+  .cat-btn,
+  .sub-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .gallery img {
+    max-height: 260px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    text-align: center;
+  }
+}
