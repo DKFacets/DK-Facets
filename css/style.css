@@ -352,8 +352,11 @@ footer {
   height: auto;
   max-height: 360px;
   object-fit: contain;
-  background: #0b1220;
-  padding: 12px;
+   background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
   border-radius: 12px;
 }
 
@@ -362,8 +365,11 @@ footer {
   height: auto;
   max-height: 300px;
   object-fit: contain;
-  background: #0b1220;
-  padding: 12px;
+   background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  outline: none !important;
   border-radius: 12px;
   transition: transform 0.4s ease;
 }
@@ -690,4 +696,5 @@ footer {
   transform: translateY(-6px);
   box-shadow: none;
 }
+
 
