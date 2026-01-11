@@ -357,7 +357,6 @@ footer {
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
-  border-radius: 12px;
 }
 
 .gallery-img {
@@ -370,7 +369,6 @@ footer {
   border: none !important;
   box-shadow: none !important;
   outline: none !important;
-  border-radius: 12px;
   transition: transform 0.4s ease;
 }
 
@@ -696,5 +694,6 @@ footer {
   transform: translateY(-6px);
   box-shadow: none;
 }
+
 
 
